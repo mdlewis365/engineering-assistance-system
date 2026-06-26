@@ -271,6 +271,63 @@ EAS may require human review for these cases even if calculations can be perform
 
 ---
 
+### 3.11 Supporting Documents / Attachments
+
+EAS may receive supporting documents or attachments as part of an engineering request when available.
+
+Supporting materials may include:
+
+* Datasheets
+* Manufacturer manuals
+* Pump curves
+* Wiring diagrams
+* Schematics
+* Drawings
+* Photos
+* Screenshots
+* Spreadsheets
+* CSV data
+* Test results
+* Inspection notes
+* Software logs
+* Error traces
+* Configuration files
+* Prior calculations
+
+Supporting documents can improve the advisory workflow by providing additional context, source values, constraints, component ratings, observed symptoms, or validation evidence.
+
+When supporting documents are used, EAS should distinguish between:
+
+* User-entered values
+* Values extracted or summarized from documents
+* Assumptions made because a document was incomplete
+* Missing or unreadable document information
+* Conflicting document information
+* Values requiring human confirmation
+
+Uploaded documents should not be treated as automatically complete or authoritative. EAS should surface uncertainty when document content is missing, ambiguous, unreadable, conflicting, outdated, or not applicable to the engineering problem.
+
+Examples of useful supporting documents include:
+
+```text
+Motor datasheet
+Gear reducer specification sheet
+Pump curve PDF
+Wiring diagram
+Conveyor layout drawing
+Hydraulic schematic
+Thermal enclosure datasheet
+Software error log
+Backend stack trace
+Configuration file
+Test report
+Inspection notes
+```
+
+Supporting documents are optional, but they can significantly improve the quality and traceability of the advisory report.
+
+---
+
 ## 4. Recommended Input Template
 
 A strong EAS request can use the following structure:
@@ -289,6 +346,10 @@ Known Values:
 - [value 1 with unit]
 - [value 2 with unit]
 - [value 3 with unit]
+
+Supporting Documents / Attachments:
+- [datasheet, drawing, log, photo, spreadsheet, schematic, or other supporting file]
+- [brief note describing what the document contains]
 
 Unknowns / Desired Outputs:
 - [what should be solved, reviewed, diagnosed, or recommended]
@@ -512,6 +573,8 @@ It does not include:
 * Source code
 * Operational logs
 * Private engineering pack contents
+
+This repository does not include uploaded user documents, customer files, confidential drawings, proprietary datasheets, private logs, screenshots, or document-processing implementation details.
 
 The goal is to explain the engineering input philosophy and workflow without exposing private implementation details.
 
