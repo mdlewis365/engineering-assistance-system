@@ -37,3 +37,7 @@ EAS is advisory. It does not replace licensed engineering review, safety review,
 ## What Is Not Included
 
 This repository excludes private prompts, source code, backend routes, function names, authentication logic, model-routing internals, credentials, raw supporting documents, raw logs, raw job payloads, database schemas, proprietary governance logic, and implementation details that would allow cloning the system.
+
+## Verification Without Source Code
+
+Because the production implementation is proprietary, this repository verifies the system through architecture docs, sanitized examples, validation traces, screenshots, and public-safe workflow descriptions.
